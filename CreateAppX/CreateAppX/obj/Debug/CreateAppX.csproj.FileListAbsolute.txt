@@ -1,0 +1,14 @@
+F:\GitProjects\CreateAppX\CreateAppX\CreateAppX\bin\Debug\CreateAppX.exe.config
+F:\GitProjects\CreateAppX\CreateAppX\CreateAppX\bin\Debug\CreateAppX.exe
+F:\GitProjects\CreateAppX\CreateAppX\CreateAppX\bin\Debug\CreateAppX.pdb
+F:\GitProjects\CreateAppX\CreateAppX\CreateAppX\obj\Debug\CreateAppX.csprojResolveAssemblyReference.cache
+F:\GitProjects\CreateAppX\CreateAppX\CreateAppX\obj\Debug\MainWindow.g.cs
+F:\GitProjects\CreateAppX\CreateAppX\CreateAppX\obj\Debug\App.g.cs
+F:\GitProjects\CreateAppX\CreateAppX\CreateAppX\obj\Debug\CreateAppX_MarkupCompile.cache
+F:\GitProjects\CreateAppX\CreateAppX\CreateAppX\obj\Debug\CreateAppX_MarkupCompile.lref
+F:\GitProjects\CreateAppX\CreateAppX\CreateAppX\obj\Debug\MainWindow.baml
+F:\GitProjects\CreateAppX\CreateAppX\CreateAppX\obj\Debug\CreateAppX.g.resources
+F:\GitProjects\CreateAppX\CreateAppX\CreateAppX\obj\Debug\CreateAppX.Properties.Resources.resources
+F:\GitProjects\CreateAppX\CreateAppX\CreateAppX\obj\Debug\CreateAppX.csproj.GenerateResource.Cache
+F:\GitProjects\CreateAppX\CreateAppX\CreateAppX\obj\Debug\CreateAppX.exe
+F:\GitProjects\CreateAppX\CreateAppX\CreateAppX\obj\Debug\CreateAppX.pdb
