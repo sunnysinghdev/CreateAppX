@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using CreateAppX.ViewModel;
 namespace CreateAppX
 {
     /// <summary>
@@ -27,10 +27,7 @@ namespace CreateAppX
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            ReadData da = new ReadData();
-            //   da.GetPackageName();
-            // da.UpdateManifest();
-            BuildCommand.Execute();
+            new WinManifestViewModel(@"G:\DevArea\WindowsBridge\WindowsBridge\build\Windows8.1").Save();
         }
     }
 }

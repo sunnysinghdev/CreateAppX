@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CreateAppX
+namespace CreateAppX.Model
 {
-    class BuildCommand
+    class ExecuteCMD
     {
         static int line = 0;
         static string filePath = @"F:\DevArea\SamStoreApp\SamStoreApp\SamStoreApp.Windows\SamStoreApp.Windows.jsproj";
@@ -15,7 +15,7 @@ namespace CreateAppX
         {
             try
             {
-                
+
                 using (Process p = new Process())
                 {
                     // set start info
@@ -31,10 +31,10 @@ namespace CreateAppX
                     // event handlers for output & error
                     p.OutputDataReceived += P_OutputDataReceived;
                     p.ErrorDataReceived += P_ErrorDataReceived;
-                   // p.StartInfo.Arguments = "/C msbuild";
+                    // p.StartInfo.Arguments = "/C msbuild";
                     // start process
                     p.Start();
-                    
+
                     p.BeginOutputReadLine();
                     p.BeginErrorReadLine();
 
@@ -48,11 +48,12 @@ namespace CreateAppX
 
                     //p.BeginOutputReadLine();
                     //wait
-                    while (!p.HasExited) {
+                    while (!p.HasExited)
+                    {
 
                     }
                     //p.WaitForExit();
-                    Console.WriteLine("No of Line = "+line);
+                    Console.WriteLine("No of Line = " + line);
                 }
             }
             catch (Exception ex)
@@ -81,9 +82,5 @@ namespace CreateAppX
             }
         }
 
-        
     }
-
 }
-    
-

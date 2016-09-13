@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -55,8 +56,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="BuildCommand.cs" />
-    <Compile Include="ReadeData.cs" />
+    <Compile Include="Model\EncodingBom.cs" />
+    <Compile Include="Model\ExecuteCMD.cs" />
+    <Compile Include="Model\FileBrowser.cs" />
+    <Compile Include="Model\WinManifest.cs" />
+    <Compile Include="ViewModel\WinManifestViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
