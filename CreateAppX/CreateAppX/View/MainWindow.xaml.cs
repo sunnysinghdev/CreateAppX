@@ -20,14 +20,17 @@ namespace CreateAppX
     /// </summary>
     public partial class MainWindow : Window
     {
+        public WinManifestViewModel manifest { get; set; }
         public MainWindow()
         {
             InitializeComponent();
+            manifest = new WinManifestViewModel(@"G:\DevArea\WindowsBridge\WindowsBridge\build\Windows8.1");
+            this.DataContext = manifest;
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void Browse_Click(object sender, RoutedEventArgs e)
         {
-            new WinManifestViewModel(@"G:\DevArea\WindowsBridge\WindowsBridge\build\Windows8.1").Save();
+           // new WinManifestViewModel(@"G:\DevArea\WindowsBridge\WindowsBridge\build\Windows8.1").Save();
         }
     }
 }

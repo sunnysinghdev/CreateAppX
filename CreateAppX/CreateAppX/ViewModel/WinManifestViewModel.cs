@@ -8,9 +8,9 @@ using System.Reflection;
 
 namespace CreateAppX.ViewModel
 {
-    class WinManifestViewModel
+    public class WinManifestViewModel
     {
-        PhoneManifest phoneM;
+        public PhoneManifest phoneM { get; set; }
         WindowsManifest winM;
         private string path;
         public WinManifestViewModel(string path)

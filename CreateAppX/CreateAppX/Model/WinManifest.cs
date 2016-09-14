@@ -8,7 +8,7 @@ using System.Xml;
 
 namespace CreateAppX.Model
 {
-    abstract class WinManifest:IEnumerable<string>
+    abstract public class WinManifest:IEnumerable<string>
     {
         protected string manifestPath;
         protected XmlDocument xmlDoc;
@@ -146,7 +146,7 @@ namespace CreateAppX.Model
                 "Publisher Display Name = " + PublisherDisplayName + "\n";
         }
     }
-    class PhoneManifest : WinManifest
+    public class PhoneManifest : WinManifest
     {
         public string PhoneProductId { get; set; }
 
@@ -212,7 +212,7 @@ namespace CreateAppX.Model
         }
 
     }
-    class WindowsManifest : WinManifest
+    public class WindowsManifest : WinManifest
     {
         public WindowsManifest(string path) 
         {
