@@ -61,7 +61,7 @@
     </ApplicationDefinition>
     <Compile Include="Model\EncodingBom.cs" />
     <Compile Include="Model\ExecuteCMD.cs" />
-    <Compile Include="Model\FileBrowser.cs" />
+    <Compile Include="ViewModel\FileBrowser.cs" />
     <Compile Include="Model\WinManifest.cs" />
     <Compile Include="ViewModel\WinManifestViewModel.cs" />
     <Page Include="View\MainWindow.xaml">

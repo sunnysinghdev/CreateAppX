@@ -90,7 +90,7 @@ namespace CreateAppX.Model
             set
             {
                 appDescription = value;
-                OnAppDescriptionChanged(appDisplayName);
+                OnAppDescriptionChanged(appDescription);
             }
         }
 

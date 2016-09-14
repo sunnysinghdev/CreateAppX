@@ -13,6 +13,7 @@ namespace CreateAppX.ViewModel
         public PhoneManifest phoneM { get; set; }
         WindowsManifest winM;
         private string path;
+        
         public WinManifestViewModel(string path)
         {
             phoneM = new PhoneManifest(path);
@@ -30,8 +31,8 @@ namespace CreateAppX.ViewModel
                 info.SetValue(winM, sourcePI.GetValue(phoneM, null), null);
             }
             Console.WriteLine(winM.ToString());
-            //winM.Save();
-            //phoneM.Save();
+            winM.Save();
+            phoneM.Save();
         }
     }
 }

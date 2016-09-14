@@ -24,13 +24,28 @@ namespace CreateAppX
         public MainWindow()
         {
             InitializeComponent();
-            manifest = new WinManifestViewModel(@"G:\DevArea\WindowsBridge\WindowsBridge\build\Windows8.1");
-            this.DataContext = manifest;
+            
         }
 
         private void Browse_Click(object sender, RoutedEventArgs e)
         {
-           // new WinManifestViewModel(@"G:\DevArea\WindowsBridge\WindowsBridge\build\Windows8.1").Save();
+            string path = FileBrowser.GetPath();
+            if (String.IsNullOrEmpty(path)) {
+                MessageBox.Show("Please Select Path");
+                return;
+            }
+            txtFolderPath.Text = path;
+            path = path.Split(new[] { "build" }, StringSplitOptions.RemoveEmptyEntries)[0];
+            path = path + @"build\Windows8.1";
+            Console.WriteLine(path);
+           // manifest = new WinManifestViewModel(path);
+            //this.DataContext = manifest.phoneM;
+            // new WinManifestViewModel(@"G:\DevArea\WindowsBridge\WindowsBridge\build\Windows8.1").Save();
+        }
+
+        private void Save_Click(object sender, RoutedEventArgs e)
+        {
+            manifest.Save();
         }
     }
 }

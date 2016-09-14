@@ -25,3 +25,4 @@ G:\GitProjects\CreateAppX\CreateAppX\CreateAppX\obj\Debug\CreateAppX.Properties.
 G:\GitProjects\CreateAppX\CreateAppX\CreateAppX\obj\Debug\CreateAppX.csproj.GenerateResource.Cache
 G:\GitProjects\CreateAppX\CreateAppX\CreateAppX\obj\Debug\CreateAppX.exe
 G:\GitProjects\CreateAppX\CreateAppX\CreateAppX\obj\Debug\CreateAppX.pdb
+G:\GitProjects\CreateAppX\CreateAppX\CreateAppX\obj\Debug\CreateAppX.csprojResolveAssemblyReference.cache
