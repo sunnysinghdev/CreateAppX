@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("createappx.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assests/square71.png")]
 
 

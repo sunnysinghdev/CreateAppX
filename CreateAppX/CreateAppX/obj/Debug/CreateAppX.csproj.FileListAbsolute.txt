@@ -26,3 +26,7 @@ G:\GitProjects\CreateAppX\CreateAppX\CreateAppX\obj\Debug\CreateAppX.csproj.Gene
 G:\GitProjects\CreateAppX\CreateAppX\CreateAppX\obj\Debug\CreateAppX.exe
 G:\GitProjects\CreateAppX\CreateAppX\CreateAppX\obj\Debug\CreateAppX.pdb
 G:\GitProjects\CreateAppX\CreateAppX\CreateAppX\obj\Debug\CreateAppX.csprojResolveAssemblyReference.cache
+G:\GitProjects\CreateAppX\CreateAppX\CreateAppX\obj\Debug\View\BuildProject.g.cs
+G:\GitProjects\CreateAppX\CreateAppX\CreateAppX\obj\Debug\View\BuildProject.baml
+G:\GitProjects\CreateAppX\CreateAppX\CreateAppX\obj\Debug\View\WinManifest.g.cs
+G:\GitProjects\CreateAppX\CreateAppX\CreateAppX\obj\Debug\View\WinManifest.baml

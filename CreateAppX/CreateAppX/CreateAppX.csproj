@@ -40,6 +40,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -59,11 +60,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Model\EncodingBom.cs" />
+    <Compile Include="ViewModel\BuildProjectViewModel.cs" />
+    <Compile Include="ViewModel\EncodingBom.cs" />
     <Compile Include="Model\ExecuteCMD.cs" />
     <Compile Include="ViewModel\FileBrowser.cs" />
     <Compile Include="Model\WinManifest.cs" />
     <Compile Include="ViewModel\WinManifestViewModel.cs" />
+    <Compile Include="View\WinManifest.xaml.cs">
+      <DependentUpon>WinManifest.xaml</DependentUpon>
+    </Compile>
+    <Page Include="View\BuildProject.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -72,10 +81,17 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="View\BuildProject.xaml.cs">
+      <DependentUpon>BuildProject.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\WinManifest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -105,10 +121,23 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assests\Logo.png" />
+    <Resource Include="Assets\Logo.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="CreateAppx.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\All.png" />
+    <Resource Include="Assets\Phone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Surface.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Desktop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\PhoneSimulator.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

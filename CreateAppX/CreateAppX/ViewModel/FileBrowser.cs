@@ -17,7 +17,7 @@ namespace CreateAppX.ViewModel
             // dialog.SelectedPath = FolderPath;
             // CurrentDirectory;// FolderPath;
             if (FolderPath != null) {
-               // dialog.SelectedPath = FolderPath;
+                dialog.SelectedPath = FolderPath;
             }
             dialog.ShowDialog();
             FolderPath = dialog.SelectedPath;

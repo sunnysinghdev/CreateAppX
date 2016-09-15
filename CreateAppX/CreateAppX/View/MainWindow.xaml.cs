@@ -13,39 +13,67 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CreateAppX.ViewModel;
-namespace CreateAppX
+using CreateAppX.View;
+using System.IO;
+using System.Threading;
+
+namespace CreateAppX.View
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
-        public WinManifestViewModel manifest { get; set; }
+        
         public MainWindow()
         {
             InitializeComponent();
-            
+            mainFrame.Navigate(new WinManifest());
         }
 
-        private void Browse_Click(object sender, RoutedEventArgs e)
-        {
-            string path = FileBrowser.GetPath();
-            if (String.IsNullOrEmpty(path)) {
-                MessageBox.Show("Please Select Path");
-                return;
-            }
-            txtFolderPath.Text = path;
-            path = path.Split(new[] { "build" }, StringSplitOptions.RemoveEmptyEntries)[0];
-            path = path + @"build\Windows8.1";
-            Console.WriteLine(path);
-           // manifest = new WinManifestViewModel(path);
-            //this.DataContext = manifest.phoneM;
-            // new WinManifestViewModel(@"G:\DevArea\WindowsBridge\WindowsBridge\build\Windows8.1").Save();
-        }
+        //private void Browse_Click(object sender, RoutedEventArgs e)
+        //{
+        //    string path = FileBrowser.GetPath();
+        //    if (String.IsNullOrEmpty(path))
+        //    {
+        //        MessageBox.Show("Please Select Path");
+        //        return;
+        //    }
+        //    txtFolderPath.Text = path;
+        //    if (path.IndexOf("build") >= 0)
+        //    {
+        //        path = path.Split(new[] { "build" }, StringSplitOptions.RemoveEmptyEntries)[0];
+        //        path = path + @"build\Windows8.1";
+        //    }
+        //    else if (path.IndexOf("Windows8.1") >= 0)
+        //    {
+        //        path = path.Split(new[] { "Windows8.1" }, StringSplitOptions.RemoveEmptyEntries)[0];
+        //        path = path + @"Windows8.1";
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Path does not contain build folder");
+        //        return;
+        //    }
+        //    if (!File.Exists(path + @"\Appzillon.sln"))
+        //    {
+        //        MessageBox.Show("Folder path does not conatin project files");
+        //        return;
+        //    }
+        //    new Thread(() => EncodingBom.Convert(path)).Start();
+        //    Console.WriteLine(path);
+        //    manifest = new WinManifestViewModel(path);
+        //    this.DataContext = manifest.phoneM;
 
-        private void Save_Click(object sender, RoutedEventArgs e)
-        {
-            manifest.Save();
-        }
+        //}
+
+        //private void Save_Click(object sender, RoutedEventArgs e)
+        //{
+        //    //  manifest.Save();
+        //   BuildProject pa = new BuildProject();
+        //   // NavigationService navService = NavigationService.GetNavigationService(this);
+        //  //  navService.Navigate(pa);
+        //    mainFrame.NavigationService.Navigate(pa);
+        //}
     }
 }
