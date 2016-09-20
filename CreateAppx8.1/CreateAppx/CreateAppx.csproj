@@ -49,7 +49,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>TryVisualStudioProfessional.ico</ApplicationIcon>
+    <ApplicationIcon>Tvs.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>CreateAppx.App</StartupObject>
@@ -147,7 +147,7 @@
     <Resource Include="CreateAppx.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="TryVisualStudioProfessional.ico" />
+    <Resource Include="Tvs.ico" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
