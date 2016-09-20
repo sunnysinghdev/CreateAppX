@@ -1,19 +1,19 @@
-﻿CreateAppX
+﻿CreateAppx
 
 
 winexe
 C#
 .cs
-G:\GitProjects\CreateAppX\CreateAppX\CreateAppX\obj\Debug\
-CreateAppX
+G:\DevArea\CreateAppx\CreateAppx\obj\Debug\
+CreateAppx
 none
 false
 DEBUG;TRACE
-G:\GitProjects\CreateAppX\CreateAppX\CreateAppX\App.xaml
+G:\DevArea\CreateAppx\CreateAppx\App.xaml
 31342661933
 
-131169606110
-15767094614
+14720079676
+13-1868018694
 View\BuildProject.xaml;View\MainWindow.xaml;View\WinManifest.xaml;
 
 False

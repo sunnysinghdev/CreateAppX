@@ -8,6 +8,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assests/square71.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/all.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/desktop.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/logo.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/phone.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/phonesimulator.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/surface.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/surface.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("createappx.ico")]
 
 

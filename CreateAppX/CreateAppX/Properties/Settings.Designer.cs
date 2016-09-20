@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CreateAppX.Properties
+namespace CreateAppx.Properties
 {
 
 

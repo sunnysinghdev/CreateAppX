@@ -8,18 +8,22 @@
       d:DesignHeight="500" d:DesignWidth="600"
       HorizontalAlignment="Stretch"
       VerticalAlignment="Stretch"
-      Title="BuildProject">
+      Title="BuildProject"
+      Cursor="Arrow">
     <Page.Resources>
   
     </Page.Resources>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.2*"></RowDefinition>
-            <RowDefinition Height="0.6*"></RowDefinition>
-            <RowDefinition Height="0.2*"></RowDefinition>
+            <RowDefinition Height="0.1*"></RowDefinition>
+            <RowDefinition Height="0.5*"></RowDefinition>
+            <RowDefinition Height="0.3*"></RowDefinition>
+            <RowDefinition Height="0.1*"></RowDefinition>
         </Grid.RowDefinitions>
-
-        <ListView x:Name="PlatformList" PreviewMouseLeftButtonUp="PlatformList_PreviewMouseLeftButtonUp" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+     
+        <StackPanel  Orientation="Vertical" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Label Content="Please select build option" HorizontalAlignment="Left"></Label>
+        <ListView x:Name="PlatformList" PreviewMouseLeftButtonUp="PlatformList_PreviewMouseLeftButtonUp" >
            
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
@@ -45,6 +49,17 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Button Grid.Row="2" Height="30" Width="70" HorizontalAlignment="Center" VerticalAlignment="Center">Build</Button>
+            </StackPanel>
+            
+        <StackPanel Name="BuildLog" Orientation="Vertical" Grid.Row="2" Margin="15,0,0,0" Visibility="Collapsed">
+            <Label Content="Status"></Label>
+            <Label x:Name="phoneLog"></Label>
+            <Label x:Name="surfaceLog"></Label>
+            <Label x:Name="desktopLog"></Label>
+        </StackPanel>
+        <Button Name="BuildBtn" IsEnabled="False" Grid.Row="3" Height="25" Width="70" Margin="0,0,220,0" HorizontalAlignment="Right" VerticalAlignment="Center" Click="ButtonBuild_Click">Build</Button>
+        <Button Name="FinishBtn" IsEnabled="False" Grid.Row="3" Height="25" Width="70" Margin="0,0,20,0" HorizontalAlignment="Right" VerticalAlignment="Center" Click="ButtonFinish_Click">Finish</Button>
+        <Button Name="DeployBtn" IsEnabled="False" Grid.Row="3" Height="25" Width="70" Margin="0,0,120,0" HorizontalAlignment="Right" VerticalAlignment="Center" Click="ButtonDeploy_Click">Deploy</Button>
+
     </Grid>
 </Page>

@@ -1,5 +1,4 @@
-﻿using CreateAppX.ViewModel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -16,6 +15,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using CreateAppX.ViewModel;
+
 namespace CreateAppX.View
 {
     /// <summary>
@@ -30,46 +31,20 @@ namespace CreateAppX.View
         }
         private void Browse_Click(object sender, RoutedEventArgs e)
         {
-            string path = FileBrowser.GetPath();
-            if (String.IsNullOrEmpty(path))
-            {
-                MessageBox.Show("Please Select Path");
-                return;
-            }
-            txtFolderPath.Text = path;
-            if (path.IndexOf("build") >= 0)
-            {
-                path = path.Split(new[] { "build" }, StringSplitOptions.RemoveEmptyEntries)[0];
-                path = path + @"build\Windows8.1";
-            }
-            else if (path.IndexOf("Windows8.1") >= 0)
-            {
-                path = path.Split(new[] { "Windows8.1" }, StringSplitOptions.RemoveEmptyEntries)[0];
-                path = path + @"Windows8.1";
-            }
-            else
-            {
-                MessageBox.Show("Path does not contain build folder");
-                return;
-            }
-            if (!File.Exists(path + @"\Appzillon.sln"))
-            {
-                MessageBox.Show("Folder path does not conatin project files");
-                return;
-            }
-            new Thread(() => EncodingBom.Convert(path)).Start();
-            Console.WriteLine(path);
+            string path = WinManifestViewModel.GetPath(txtFolderPath);
             manifest = new WinManifestViewModel(path);
+            ManifestGrid.Visibility = Visibility.Visible;
             this.DataContext = manifest.phoneM;
-
+            savebtn.IsEnabled = true;
         }
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-            //  manifest.Save();
+            manifest.Save();
             BuildProject pa = new BuildProject();
             // NavigationService navService = NavigationService.GetNavigationService(this);
-            //  navService.Navigate(pa);
+            // navService.Navigate(pa);
            this.NavigationService.Navigate(pa);
         }
+
     }
 }

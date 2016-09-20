@@ -23,11 +23,14 @@ namespace CreateAppX.View
     /// </summary>
     public partial class BuildProject : Page
     {
+        BuildProjectViewModel buildProject { get; set; }
+        CommandType cmdType { get; set; }
         public BuildProject()
         {
             InitializeComponent();
             this.DataContext = this;
-            List<CommandType> s = new BuildProjectViewModel().GetPlatform();
+            buildProject = new BuildProjectViewModel();
+            List<CommandType> s = buildProject.GetPlatform();
             PlatformList.ItemsSource = s;
            
           //  pack://aplication:,,,/Assets/Phone.png
@@ -40,7 +43,67 @@ namespace CreateAppX.View
             CommandType c = (sender as ListView).SelectedItem as CommandType;
             if (c != null) {
                 MessageBox.Show(c.Platform);
+                cmdType = c;
+                BuildBtn.IsEnabled = true;// Visibility.Visible;
             }
+        }
+
+        private void ButtonBuild_Click(object sender, RoutedEventArgs e)
+        {
+            //var a =this.Cursor ;//= Mouse.OverrideCursor;
+            BuildLog.Visibility = Visibility.Visible;
+            DeployBtn.IsEnabled = false;
+            FinishBtn.IsEnabled = false;
+            buildProject.BuildProject(cmdType,PhoneLog);
+        }
+        private void ButtonFinish_Click(object sender, RoutedEventArgs e)
+        {
+            buildProject.GetPackage();
+            Application.Current.Shutdown();
+        }
+        private void ButtonDeploy_Click(object sender, RoutedEventArgs e)
+        {
+            buildProject.DeployToDevice();
+        }
+        public void PhoneLog(string ptf, string log)
+        {
+            if (log.Length > 80)
+            {
+               log = log.Substring(0,35)+"..."+log.Substring(log.Length - 40);
+            }
+            Application.Current.Dispatcher.Invoke(() => {
+                if(log=="Completed")
+                    FinishBtn.IsEnabled = true;
+                if (ptf == "Phone")
+                {
+                    phoneLog.Content = "Phone   = " + log;//.Substring(log.Length - 30);
+                    if (log == "Completed")
+                    {
+                        DeployBtn.IsEnabled = true;
+                        
+                    }
+                }
+                else if (ptf == "Surface")
+                {
+                    surfaceLog.Content = "Surface = " + log;//.Substring(log.Length - 30);
+                }
+                else
+                {
+                    desktopLog.Content = "Desktop = " + log;//.Substring(log.Length - 25);
+                }
+            });
+            
+
+        }
+        public void SurfaceLog(string log)
+        {
+
+
+        }
+        public void DesktopLog(string log)
+        {
+
+
         }
     }
 }
