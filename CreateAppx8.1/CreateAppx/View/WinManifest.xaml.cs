@@ -32,6 +32,8 @@ namespace CreateAppX.View
         private void Browse_Click(object sender, RoutedEventArgs e)
         {
             string path = WinManifestViewModel.GetPath(txtFolderPath);
+			if(path==null)
+				return;
             manifest = new WinManifestViewModel(path);
             ManifestGrid.Visibility = Visibility.Visible;
             this.DataContext = manifest.phoneM;
